@@ -16,16 +16,17 @@ The dataset created for the paper is available upon request. Please contact auth
 - `Train_Categories_List`: commas (NO SPACES) separated of object categories to be trained on. It's ok to leave the anticipated test category, test categories will be removed from `Train_Categories_List`. 
 - `Test_Translate_Categories_List`, `Test_Open_Close_Categories_List`,`Test_RemovePart_InsertPart_Categories_List`, `Test_RemoveWhole_Categories_List`, `-Test_Rotate_Categories_List`, `Test_None_Categories_List`: commas (NO SPACES) separated of object categories to be tested on. Test categories will be removed from `Train_Categories_List`. For experiments, same object category was entered for all of these. 
 
-Below is an example of a training command for testing on the `Box` object category, 40 epochs, all verbs present: 
+Below is an example of a training command for testing on the `Box` object category, 40 epochs, all verbs present (single line, can be easily incorporated into .sh file):  
 `python multistep_batch_classifier.py -EPOCHS 40 -OPEN_CLOSE True -REMOVE_PART_INSERT_PART True -REMOVE_WHOLE True -ROTATE_VERB True -NONE_VERB True -FLIP True -ROTATE False -Train_Categories_List Box,Dishwasher,Door,Laptop,Microwave,Oven,Refrigerator,Safe,Stapler,StorageFurniture,Toilet,TrashCan,WashingMachine -Test_Translate_Categories_List Box -Test_Open_Close_Categories_List Box -Test_RemovePart_InsertPart_Categories_List Box -Test_RemoveWhole_Categories_List Box -Test_Rotate_Categories_List Box -Test_None_Categories_List Box`
 
+## Command line arguments for optimizer:
+- `OBJECT_FOLDER_PATH`: path to folder containing URDF file of object instance to undergo manipulation
+- `MODEL_DIRECTORY`: path to folder containing trained .h5 file. 
+- `VERB`: target verb (this repository currently only contains code for optimizer manipulation for the following verbs: raise, lower, translateLeft, translateRight, push, pull, roll, turn, flip, open, close)
 
+Below is ane example of training command for optimizer: 
 
-
-
-Command line arguments: 
-
-To run training: 
+`python cma_es_trajectory.py -OBJECT_FOLDER_PATH box5/ -MODEL_DIRECTORY Classification_conv_40_flip-True_rotate-False_5steps_rotation_argment-304590_translateremoveWholerotatenoneBox_openremovePart-Box_removeWhole-Box -VERB raise`
 
 
 
