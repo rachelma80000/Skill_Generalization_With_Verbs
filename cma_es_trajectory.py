@@ -30,7 +30,7 @@ DEBUG = False
 PROJECT_HOME_DIRECTORY = "/home/" #change to home/project directory
 
 
-PYTHON_SCRIPTS_DIRECTORY = PROJECT_HOME_DIRECTORY + "Goal-Transfer-Verbs/sapien-scripts/"
+PYTHON_SCRIPTS_DIRECTORY = PROJECT_HOME_DIRECTORY + "Goal-Transfer-Verbs/sapien-scripts/" #change
 
 part_folder_path = PROJECT_HOME_DIRECTORY + "101940/"
 test_urdf_file_path = part_folder_path + "mobility.urdf" 

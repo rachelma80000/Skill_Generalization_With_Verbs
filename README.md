@@ -1,10 +1,13 @@
 # Skill Generalization Via Verbs 
 Classifier model and optimizer code for the paper: Skill Generalization Via Verbs.
+Demonstration video linked here. (Insert link here). 
 
 ## Setup 
 See Requirements.txt for modules required.
 
 The dataset created for the paper is available upon request. Please contact author at rma20@cs.brown.edu. 
+
+To run code, you will need to edit `PROJECT_HOME_DIRECTORY` paths. It is also assumed that the `images/` folder is placed within `PROJECT_HOME_DIRECTORY`. 
 
 # Command line arguments to run:
 
@@ -24,7 +27,7 @@ Below is an example of a training command for testing on the `Box` object catego
 - `MODEL_DIRECTORY`: path to folder containing trained .h5 file. 
 - `VERB`: target verb (this repository currently only contains code for optimizer manipulation for the following verbs: raise, lower, translateLeft, translateRight, push, pull, roll, turn, flip, open, close)
 
-Below is ane example of training command for optimizer: 
+Below is ane example of training command for optimizer (single line, can be easily incorporated into .sh file): 
 
 `python cma_es_trajectory.py -OBJECT_FOLDER_PATH box5/ -MODEL_DIRECTORY Classification_conv_40_flip-True_rotate-False_5steps_rotation_argment-304590_translateremoveWholerotatenoneBox_openremovePart-Box_removeWhole-Box -VERB raise`
 
