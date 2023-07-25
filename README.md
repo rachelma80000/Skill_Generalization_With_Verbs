@@ -1,13 +1,16 @@
 # Skill Generalization Via Verbs 
-Classifier model and optimizer code for the paper: Skill Generalization Via Verbs.
+Classifier model and optimizer code for the accepted IROS paper: Skill Generalization Via Verbs.
 Demonstration video linked here. (Insert link here). 
+
+Please make sure to cite this work: 
+(Bibtex citation here/coming soon.)
 
 ## Setup 
 See Requirements.txt for modules required.
 
-The dataset created for the paper is available upon request. Please contact author at rma20@cs.brown.edu. 
+The images dataset created for the paper is available upon request. Please contact author at rma20@cs.brown.edu. 
 
-To run code, you will need to edit `PROJECT_HOME_DIRECTORY` paths. It is also assumed that the `images/` folder is placed within `PROJECT_HOME_DIRECTORY`. 
+To run code, you will need to edit `PROJECT_HOME_DIRECTORY` paths. It is also assumed that the `images/` folder is placed within `PROJECT_HOME_DIRECTORY`. Make sure files are unzipped. 
 
 # Command line arguments to run:
 
