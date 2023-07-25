@@ -27,7 +27,7 @@ import cma
 
 DEBUG = False
 
-PROJECT_HOME_DIRECTORY = "/home/rara/Documents/research_2022/demo_test/" #change to  home directory
+PROJECT_HOME_DIRECTORY = "/home/" #change to home/project directory
 
 
 PYTHON_SCRIPTS_DIRECTORY = PROJECT_HOME_DIRECTORY + "Goal-Transfer-Verbs/sapien-scripts/"

@@ -27,9 +27,9 @@ import shutil
 from datetime import datetime
 import json
 
-from jan2023_batch_data_generator import DataGenerator
+from batch_data_generator import DataGenerator
 ## home project directories ##
-PROJECT_HOME_DIRECTORY = "/home/rara/Documents/research_2022/" #set to your home directory
+PROJECT_HOME_DIRECTORY = "/home/" #set to your home directory
 ## image directories for dataset ##
 IMAGES_DIRECTORY = PROJECT_HOME_DIRECTORY + "images/"
 

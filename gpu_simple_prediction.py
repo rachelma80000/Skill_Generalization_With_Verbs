@@ -13,7 +13,7 @@ import math
 SHOW_DEBUG_INFO = True
 LIMIT_FLAG = False
 
-PROJECT_HOME_DIRECTORY = "/home/rara/"
+PROJECT_HOME_DIRECTORY = "/home/" #set home directory/project directory
 TEST_IMAGE_DIRECTORY = PROJECT_HOME_DIRECTORY + "Documents/test/101940/"
 SAVED_MODEL_PATH = TEST_IMAGE_DIRECTORY+"all_images_conv_Classification_VGG19.h5"
 
