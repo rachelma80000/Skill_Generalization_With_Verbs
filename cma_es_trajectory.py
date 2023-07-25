@@ -65,8 +65,7 @@ LOG_TXT_PATH = PROJECT_HOME_DIRECTORY + "MAB_Log.txt"
 g_debug_test_variable_info = ""
 loss_numpy_file = exe_name+VERB + "_penalty1-"+str(penalty_rate1)+ ".npy"
 
-from gpu_simple_prediction import main_without_parameters
-from gpu_simple_prediction import main_without_parameters_SCALAR, retrieve_loss
+from gpu_simple_prediction import main_without_parameters_SCALAR
 #where the edited urdf files will be
 EDITED_URDF_FILE_STEP_2_to_5 = [part_folder_path + "2.urdf", part_folder_path + "3.urdf", part_folder_path + "4.urdf", part_folder_path + "5.urdf"]
 #where the rendered images will be

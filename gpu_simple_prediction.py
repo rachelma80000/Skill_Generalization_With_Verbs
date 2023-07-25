@@ -29,7 +29,7 @@ n_channels=3
 batch_size=32
 snapshot_size = 5
 class_categories_dict ={'raise': 0, 'lower': 1, 'translateLeft': 2, 'translateRight': 3, 'push': 4, 'pull': 5, 'open': 6, 'close': 7, 'removePart': 8, 'insertPart': 9, 'removeWhole': 10, 'flip': 11, 'roll': 12, 'turn': 13, 'none3': 14, 'none2':15}
-#class_categories_dict ={'raise': 0, 'lower': 1, 'translateLeft': 2, 'translateRight': 3, 'push': 4, 'pull': 5, 'open': 6, 'close': 7, 'removePart': 8, 'insertPart': 9, 'removeWhole': 10, 'flip': 11, 'roll': 12, 'turn': 13, 'none3': 14}
+
 def debug(caption, string):
     if SHOW_DEBUG_INFO == True:
         print(caption, string)
@@ -74,52 +74,12 @@ def make_prediction(img_path_list, SAVED_MODEL_PATH):
     print("prediction:", prediction)
     return prediction  
 
-
-def retrieve_score(prediction, verb): 
-    sing_prediction = prediction[0]
-    verb_index = class_categories_dict[verb]
-    score = float(sing_prediction[verb_index].numpy())
-    print("score:", score, type(score))
-    return score
-    
-def main_without_parameters(img_path_list, saved_model_path, verb):
-    prediction = make_prediction(img_path_list, SAVED_MODEL_PATH)
-    score = retrieve_score(prediction, verb)
-    return score
-
 def cross_entropy(y_true, y_pred):
+    """reimplemented cross entropy loss to prevent internal rounding"""
     eps = 1e-45
     y_pred[y_pred < eps] = eps
     cross = np.sum(-y_true * np.log(y_pred), axis=1)
     return cross[0]
-
-def binary_cross_entropy(y_true, y_pred, true_index):
-    eps = 1e-45
-    cross = 0
-    for i in range(len(y_pred)):
-        if i == true_index:
-            preb = y_pred[i]
-            y = y_true[i]
-        else:
-            preb = 1 - y_pred[i]
-            y = 1 - y_true[i] 
-            
-        if preb < 1e-45:
-            preb = 1e-45
-        cross += -y * np.log(preb)
-    return cross
-
-def retrieve_classifier_loss(prediction, verb):
-    sing_prediction = prediction[0]
-    scale_index = math.pow(10, 2)
-    verb_index = class_categories_dict[verb]
-    verb_result = sing_prediction[verb_index]
-    reward = scale_index * verb_result
-    # verb result will be high if verb probability is higher, lower_loss
-    highest_result_possible = math.pow(10, 2)
-    loss = highest_result_possible - reward
-
-    return loss
 
 
 def retrieve_score_SCALAR(prediction, verb): 
@@ -152,8 +112,3 @@ def main_without_parameters_SCALAR(img_path_list, saved_model_path, verb):
     prediction = make_prediction(img_path_list, saved_model_path)
     sing_pred, target, score = retrieve_score_SCALAR(prediction, verb)
     return sing_pred, target, score
-
-def retrieve_loss(img_path_list, saved_model_path, verb):
-    prediction = make_prediction(img_path_list, saved_model_path)
-    score = retrieve_classifier_loss(prediction, verb)
-    return score
