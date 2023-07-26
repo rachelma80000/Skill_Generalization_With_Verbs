@@ -1,7 +1,8 @@
 # Skill Generalization Via Verbs 
 Classifier model and optimizer code for the accepted IROS paper: Skill Generalization Via Verbs.
 
-Please make sure to cite this work if you are inspired or use the code: 
+Please make sure to cite this work if you are inspired or use the code: <br />
+
 `@article{ma2023skill,
       title={{Skill Generalization with Verbs}},
       author={Ma, Rachel and Lam, Lyndon and Spiegel, Benjamin A. and Ganeshan, Aditya and Patel, 
