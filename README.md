@@ -3,13 +3,13 @@ Classifier model and optimizer code for the accepted IROS paper: Skill Generaliz
 
 Please make sure to cite this work if you are inspired or use the code: <br />
 
-`@article{ma2023skill,
-      title={{Skill Generalization with Verbs}},
-      author={Ma, Rachel and Lam, Lyndon and Spiegel, Benjamin A. and Ganeshan, Aditya and Patel, 
-        Roma and Abbatematteo, Ben and Paulius, David and Tellex, Stefanie and Konidaris, George},
-      journal={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-      year={2023},
-    }`
+`@article{ma2023skill,` <br />
+      `title={{Skill Generalization with Verbs}},`  <br />
+      `author={Ma, Rachel and Lam, Lyndon and Spiegel, Benjamin A. and Ganeshan, Aditya and Patel,`  <br />
+        `Roma and Abbatematteo, Ben and Paulius, David and Tellex, Stefanie and Konidaris, George},`  <br />
+      `journal={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},`  <br />
+      `year={2023},`  <br />
+    `}` 
 
 ## Setup 
 See Requirements.txt for modules required.
