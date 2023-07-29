@@ -14,7 +14,7 @@ Please make sure to cite this work if you are inspired or use the code: <br />
 ## Setup 
 See Requirements.txt for modules required.
 
-The images dataset created for the paper is available upon request. Please contact author at rma20@cs.brown.edu. 
+The images dataset created for the paper is available upon request. Please contact author at rachelm8@mit.edu.
 
 To run code, you will need to edit `PROJECT_HOME_DIRECTORY` paths. It is also assumed that the `images/` folder is placed within `PROJECT_HOME_DIRECTORY`. Make sure files are unzipped. 
 
