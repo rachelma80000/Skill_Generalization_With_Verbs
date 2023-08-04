@@ -1,13 +1,20 @@
 # Skill Generalization Via Verbs 
 Classifier model and optimizer code for the accepted IROS paper: Skill Generalization Via Verbs.
 
-Please make sure to cite this work: 
-(Bibtex citation here/coming soon.)
+Please make sure to cite this work if you are inspired or use the code: <br />
+
+`@article{ma2023skill,` <br />
+      `title={{Skill Generalization with Verbs}},`  <br />
+      `author={Ma, Rachel and Lam, Lyndon and Spiegel, Benjamin A. and Ganeshan, Aditya and Patel,`  <br />
+        `Roma and Abbatematteo, Ben and Paulius, David and Tellex, Stefanie and Konidaris, George},`  <br />
+      `journal={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},`  <br />
+      `year={2023},`  <br />
+    `}` 
 
 ## Setup 
 See Requirements.txt for modules required.
 
-The images dataset created for the paper is available upon request. Please contact author at rma20@cs.brown.edu. 
+The images dataset created for the paper is available upon request. Please contact author at rachelm8@mit.edu.
 
 To run code, you will need to edit `PROJECT_HOME_DIRECTORY` paths. It is also assumed that the `images/` folder is placed within `PROJECT_HOME_DIRECTORY`. Make sure files are unzipped. 
 
