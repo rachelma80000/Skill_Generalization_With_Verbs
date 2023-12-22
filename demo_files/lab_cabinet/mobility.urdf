@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<robot name="lab_cabinet">
+	<link name="base"/>
+	<link name="link_0">
+		<visual name="side-1">
+			<origin rpy="0 1.57075 0" xyz="0 0 0"/>
+			<geometry>
+				<box size="0.764 0.306 0.015"/>
+			</geometry>
+		</visual>
+		<visual name="backside-2">
+			<origin rpy="0 1.57075 1.57075" xyz="-0.2225 -0.15 0"/>
+			<geometry>
+				<box size="0.764 0.445 0.010"/>
+			</geometry>
+		</visual>
+		<visual name="side-2">
+			<origin rpy="0 1.57075 0" xyz="-0.445 0 0"/>
+			<geometry>
+				<box size="0.764 0.306 0.015"/>
+			</geometry>
+		</visual>
+		<visual name="fronttop-1">
+			<origin rpy="0 1.57075 1.57075" xyz="-0.2225 0.15 0.362"/>
+			<geometry>
+				<box size="0.04 0.457 0.020"/>
+			</geometry>
+		</visual>
+		<visual name="frontside-1">
+			<origin rpy="0 1.57075 0" xyz="-0.447 0.15 0"/>
+			<geometry>
+				<box size="0.764 0.020 0.04"/>
+			</geometry>
+		</visual>
+		<visual name="frontside-2">
+			<origin rpy="0 1.57075 0" xyz="0 0.15 0"/>
+			<geometry>
+				<box size="0.764 0.020 0.04"/>
+			</geometry>
+		</visual>
+		<visual name="frontbottom-1">
+			<origin rpy="0 1.57075 1.57075" xyz="-0.2225 0.15 -0.362"/>
+			<geometry>
+				<box size="0.04 0.457 0.020"/>
+			</geometry>
+		</visual>
+		<visual name="toppanel-1">
+			<origin rpy="0 0 1.57075" xyz="-0.225 0 0.382"/>
+			<geometry>
+				<box size="0.306 0.445 0.015"/>
+			</geometry>
+		</visual>
+		<visual name="bottompanel-1">
+			<origin rpy="0 0 1.57075" xyz="-0.225 0 -0.382"/>
+			<geometry>
+				<box size="0.306 0.445 0.015"/>
+			</geometry>
+		</visual>
+	</link>
+	
+	<joint name="joint_0" type="fixed">
+        <origin rpy="0 0 1.57075" xyz="-0.15 0.2225 0"/>
+		<child link="link_0"/>
+		<parent link="base"/>
+    </joint>
+
+
+	<link name="link_1">
+		 <visual name="door-1">
+			<origin rpy="0 1.570750 1.570750" xyz="-0.2225 0.02 0"/>
+			<geometry>
+				<box size="0.705 0.435 0.020"/>
+			</geometry>
+		</visual>
+		<visual name="doortopblock-1">
+			<origin rpy="0 0 0" xyz="-0.41 0.073 0.212"/>
+			<geometry>
+				<box size="0.084 0.084 0.090"/>
+			</geometry>
+		</visual>
+		<visual name="doorbottomblock-1">
+			<origin rpy="0 0 0" xyz="-0.41 0.073 -0.222"/>
+			<geometry>
+				<box size="0.084 0.084 0.090"/>
+			</geometry>
+		</visual>
+		<visual name="handletop-1">
+			<origin rpy="1.570750 0 0" xyz="-0.41 0.15 -0.222"/>
+			<geometry>
+				<box size="0.015 0.015 0.090"/>
+			</geometry>
+		</visual>
+		<visual name="handlebottom-1">
+			<origin rpy="1.570750 0 0" xyz="-0.41 0.15 0.222"/>
+			<geometry>
+				<box size="0.015 0.015 0.090"/>
+			</geometry>
+		</visual>
+		<visual name="handle_cylinder">
+			<origin rpy="0 0 1.570750" xyz="-0.41 0.20 0"/>
+			<geometry>
+				<cylinder length="0.41" radius="0.025"/>
+			</geometry>
+		</visual>
+	</link>
+
+
+
+	<joint name="joint_1" type="revolute">
+        <origin xyz="0 0.15 0"/>
+		<axis xyz="0 0 -1"/>
+		<child link="link_1"/>
+		<parent link="link_0"/>
+		<limit lower="0.0" upper="1.5079644737231006"/>
+    </joint>
+
+</robot>
