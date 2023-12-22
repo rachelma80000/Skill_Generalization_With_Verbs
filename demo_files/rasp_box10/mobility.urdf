@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<robot name="rasp_box">
+	<link name="base"/>
+	<link name="link_0">
+		<visual name="bigbottom">
+			<origin rpy="0 0 1.57075" xyz="0 0 0"/>
+			<geometry>
+				<box size="1.20 0.75 0.05"/>
+			</geometry>
+		</visual>
+		<visual name="bigtop">
+			<origin rpy="0 0 1.57075" xyz="0 0 0.3"/>
+			<geometry>
+				<box size="1.20 0.75 0.05"/>
+			</geometry>
+		</visual>
+		<visual name="longsideback">
+			<origin rpy="1.57075 0 1.57075" xyz="0.4 0 0.17"/>
+			<geometry>
+				<box size="1.20 0.3 0.05"/>
+			</geometry>
+		</visual>
+		<visual name="longsidefront">
+			<origin rpy="1.57075 0 1.57075" xyz="-0.4 0 0.17"/>
+			<geometry>
+				<box size="1.20 0.3 0.05"/>
+			</geometry>
+		</visual>
+		<visual name="shortsideleft">
+			<origin rpy="0 1.57075 1.57075" xyz="0 0.57 0.17"/>
+			<geometry>
+				<box size="0.3 0.75 0.05"/>
+			</geometry>
+		</visual>
+		<visual name="shortsideright">
+			<origin rpy="0 1.57075 1.57075" xyz="0 -0.57 0.17"/>
+			<geometry>
+				<box size="0.3 0.75 0.05"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="joint_0" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+		<child link="link_0"/>
+		<parent link="base"/>
+    </joint>
+</robot>
